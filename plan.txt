@@ -1,0 +1,6 @@
+install
+home page
+create cart
+oder controller and link it to server.js
+admin and normal
+
