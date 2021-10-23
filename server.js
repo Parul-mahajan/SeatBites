@@ -6,6 +6,10 @@ const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3300; // setting up port
 
 
+
+// assests kha rakhe hai btana hai to add css in home.ejs
+app.use(express.static('public'))
+
 app.get('/',(req,res)=>{
     res.render('home') // folder/file
 })
