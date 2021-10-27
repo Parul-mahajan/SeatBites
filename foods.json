@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Chicken Burger",
+    "price": "150",
+    "type": "non veg",
+    "image": "IMG_20211026_171536.png"
+  },
+
+  {
+    "name": "Steamed Chicken Momos",
+    "price": "100",
+    "type": "non veg",
+    "image": "IMG_20211026_172120.jpg"
+  },
+
+  {
+    "name": "Chicken Pizaa",
+    "price": "270",
+    "type": "non veg",
+    "image": "IMG_20211026_172009.jpg"
+  },
+  {
+    "name": "Chicken Sandwhich",
+    "price": "100",
+    "type": "non veg",
+    "image": "IMG_20211026_171702.jpg"
+  },
+  {
+    "name": "Chicken tacos",
+    "price": "200",
+    "type": "non veg",
+    "image": "IMG_20211026_171716.jpg"
+  },
+  {
+    "name": "Chicken wings",
+    "price": "250",
+    "type": "non veg",
+    "image": "IMG_20211026_171741.jpg"
+  },
+  {
+    "name": "Fried Chicken Momo",
+    "price": "120",
+    "type": "non veg",
+    "image": "IMG_20211026_172046.jpg"
+  },
+  {
+    "name": "Veg Burger",
+    "price": "100",
+    "type": "veg",
+    "image": "IMG_20211026_172651.png"
+  },
+  {
+    "name": "Butter Popcorn",
+    "price": "100",
+    "type": "veg",
+    "image": "IMG_20211026_171451.jpg"
+  },
+  {
+    "name": "Corn Nachos",
+    "price": "80",
+    "type": "veg",
+    "image": "IMG_20211026_172020.jpg"
+  },
+  {
+    "name": "Veg Patty",
+    "price": "90",
+    "type": "veg",
+    "image": "veg patty.png"
+  },
+  {
+    "name": "Fried Veg Momo",
+    "price": "100",
+    "type": "veg",
+    "image": "IMG_20211026_172046.jpg"
+  },
+  {
+    "name": "Steamed Veg Momo",
+    "price": "80",
+    "type": "veg",
+    "image": "IMG_20211026_172120.jpg"
+  },
+  {
+    "name": "Fries",
+    "price": "80",
+    "type": "veg",
+    "image": "IMG_20211026_172057.jpg"
+  },
+  {
+    "name": "Veg Sandwhich",
+    "price": "80",
+    "type": "veg",
+    "image": "IMG_20211026_172739.jpg"
+  },
+  {
+    "name": "Paneer Tikka",
+    "price": "130",
+    "type": "veg",
+    "image": "IMG_20211026_172143.jpg"
+  },
+  {
+    "name": "Paneer Pizaa",
+    "price": "250",
+    "type": "veg",
+    "image": "IMG_20211026_172130.png"
+  },
+  {
+    "name": "Veg Pizaa",
+    "price": "220",
+    "type": "veg",
+    "image": "IMG_20211026_172905.jpg"
+  },
+  {
+    "name": "Samosa",
+    "price": "50",
+    "type": "veg",
+    "image": "IMG_20211026_172419.jpg"
+  },
+  {
+    "name": "Spring Roll",
+    "price": "100",
+    "type": "veg",
+    "image": "IMG_20211026_172636.jpg"
+  },
+  {
+    "name": "Veg Cutlets",
+    "price": "120",
+    "type": "veg",
+    "image": "IMG_20211026_172703.jpg"
+  },
+  {
+    "name": "Veg Noodles",
+    "price": "100",
+    "type": "veg",
+    "image": "IMG_20211026_172714.jpg"
+  },
+  {
+    "name": "Pepsi Coke",
+    "price": "30",
+    "type": "drinks",
+    "image": "IMG_20211026_172209.jpg"
+  },
+  {
+    "name": "7up Coke",
+    "price": "30",
+    "type": "drinks",
+    "image": "7up.jpg"
+  },
+  {
+    "name": "Red Bull",
+    "price": "30",
+    "type": "drinks",
+    "image": "IMG_20211026_172220.png"
+  },
+  {
+    "name": "Cold COfee",
+    "price": "90",
+    "type": "drinks",
+    "image": "IMG_20211026_171814.jpg"
+  },
+  {
+    "name": "Shamrock Shake",
+    "price": "100",
+    "type": "drinks",
+    "image": "shamrock shake.jpg"
+  },
+  {
+    "name": "Brownie",
+    "price": "80",
+    "type": "desserts",
+    "image": "IMG_20211026_171431.jpg"
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "price": "110",
+    "type": "desserts",
+    "image": "IMG_20211026_171802.jpg"
+  },
+  {
+    "name": "Cupcake",
+    "price": "70",
+    "type": "desserts",
+    "image": "cupcake.png"
+  },
+  {
+    "name": "Peach Cobbler",
+    "price": "140",
+    "type": "desserts",
+    "image": "IMG_20211026_172157.jpg"
+  },
+  {
+    "name": "Butter Scotch Icecream",
+    "price": "110",
+    "type": "desserts",
+    "image": "butter scoth ice.jpg"
+  },
+  {
+    "name": "Mango Alphanso Icecream",
+    "price": "110",
+    "type": "desserts",
+    "image": "IMG_20211026_172109.jpg"
+  }
+]
