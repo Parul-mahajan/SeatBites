@@ -79,10 +79,9 @@ function authController() {
           return res.redirect("/register");
         });
     },
-    logout(req, res) {
-      return console.log("pressed");
-      // req.logout();
-      // return res.redirect("/");
+    postLogout(req, res, next) {
+      req.logout();
+      return res.redirect("/");
     },
   };
 }

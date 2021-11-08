@@ -2,8 +2,6 @@ const LocalStrategy = require("passport-local").Strategy;
 const User = require("../modals/user");
 const bcrypt = require("bcrypt");
 
-
-
 function init(passport) {
   passport.use(
     new LocalStrategy(
