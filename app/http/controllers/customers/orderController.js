@@ -41,7 +41,7 @@ function orderController() {
         return res.render("customers/singleOrder", { order });
       }
       return res.redirect("/");
-    },
+    }
   };
 }
 

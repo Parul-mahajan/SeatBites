@@ -18,7 +18,7 @@ function init(passport) {
           .compare(password, user.password)
           .then((match) => {
             if (match) {
-              return done(null, user, { message: "Logged in succesfully" });
+              return done(null, user, { message: "Logged in successfully" });
             }
             return done(null, false, { message: "Wrong username or password" });
           })

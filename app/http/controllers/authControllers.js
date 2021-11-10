@@ -80,9 +80,9 @@ function authController() {
         });
     },
     logout(req, res) {
-      return console.log("pressed");
-      // req.logout();
-      // return res.redirect("/");
+      // return console.log("pressed");
+      req.logout();
+      res.redirect("/");
     },
   };
 }
