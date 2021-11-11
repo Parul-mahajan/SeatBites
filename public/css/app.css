@@ -353,11 +353,11 @@ section.login a:hover {
 }
 
 a.link {
-  color: #406343;
+  color: #d1444a;
 }
 
 section.status {
-  background: #e9daa8;
+  background: #f4efe3;
   min-height: calc(100vh - 86px);
 }
 
@@ -433,27 +433,27 @@ section.status {
 }
 
 .status-box ul li:nth-child(5) span::after {
-  box-shadow: 0 0px 0px 0px #406343;
+  box-shadow: 0 0px 0px 0px #d1444a;
 }
 
 .status-box ul li.step-completed:before {
-  background: #c0b8b8;
+  background: #535252;
 }
 
 .status-box ul li.step-completed span:after {
-  background: #c0b8b8;
+  background: #535252;
 }
 
 .status-box ul li.step-completed span {
-  color: #c0b8b8;
+  color: #535252;
 }
 
 .status-box ul li.current span:after {
-  background: #406343;
+  background: #d1444a;
 }
 
 .status-box ul li.current span {
-  color: #406343;
+  color: #d1444a;
 }
 
 .status-box ul li small {
