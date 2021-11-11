@@ -2276,16 +2276,16 @@ if (alertMsg) {
 //order status
 
 
-var statuses = document.querySelectorAll('.status_line');
-var hiddenInput = document.querySelector('#hiddenInput');
+var statuses = document.querySelectorAll(".status_line");
+var hiddenInput = document.querySelector("#hiddenInput");
 var order = hiddenInput ? hiddenInput.value : null;
 order = JSON.parse(order);
-var time = document.createElement('small');
+var time = document.createElement("small");
 
 function updateStatus(order) {
   statuses.forEach(function (status) {
-    status.classList.remove('step-completed');
-    status.classList.remove('current');
+    status.classList.remove("step-completed");
+    status.classList.remove("current");
   });
   var stepCompleted = true;
   statuses.forEach(function (status) {
@@ -2297,7 +2297,7 @@ function updateStatus(order) {
 
     if (dataProp === order.status) {
       stepCompleted = false;
-      time.innerText = moment__WEBPACK_IMPORTED_MODULE_3___default()(order.updatedAt).format('hh:mm A');
+      time.innerText = moment__WEBPACK_IMPORTED_MODULE_3___default()(order.updatedAt).format("hh:mm A");
       status.appendChild(time);
 
       if (status.nextElementSibling) {
@@ -2309,20 +2309,20 @@ function updateStatus(order) {
 
 updateStatus(order); //socket
 
-var socket = io();
-(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(socket); //join
+var socket = io(); //join
 
 if (order) {
-  socket.emit('join', "order_".concat(order._id));
+  socket.emit("join", "order_".concat(order._id));
 }
 
 var adminAreaPath = window.location.pathname;
 
-if (adminAreaPath.includes('admin')) {
-  socket.emit('join', 'adminRoom');
+if (adminAreaPath.includes("admin")) {
+  (0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(socket);
+  socket.emit("join", "adminRoom");
 }
 
-socket.on('orderUpdated', function (data) {
+socket.on("orderUpdated", function (data) {
   var updatedOrder = _objectSpread({}, order);
 
   updatedOrder.updatedAt = moment__WEBPACK_IMPORTED_MODULE_3___default()().format();

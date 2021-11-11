@@ -41,13 +41,12 @@ section.hero {
     background: $primary;
     // border-color: $pure;
     color: $pure;
-    
   }
 
   &:focus {
     outline: none;
   }
-  display:inline;
+  display: inline;
 }
 
 .btn-primary {
@@ -58,7 +57,7 @@ section.hero {
   }
 }
 .inline {
-  display:inline;
+  display: inline;
 }
 
 section.cart {
@@ -78,28 +77,28 @@ section.login {
     }
   }
 }
-a.link{
+a.link {
   color: $primary;
 }
 
-section.status{
+section.status {
   background: $secondary;
-  min-height: calc(100vh - 86px) ;
+  min-height: calc(100vh - 86px);
 }
 
-.status-box{
+.status-box {
   padding: 60px 0 0;
 }
 .status-box ul {
   margin-left: 84px;
 }
-.status-box ul li span{
+.status-box ul li span {
   position: relative;
   padding-left: 20px;
 }
 //dots
 .status-box ul li span:after {
-  content: '';
+  content: "";
   position: absolute;
   left: -10px;
   top: 50%;
@@ -108,10 +107,9 @@ section.status{
   height: 10px;
   border-radius: 50%;
   transform: translateY(-50%);
-  
 }
 // Icons
-.status-box ul li span:before{
+.status-box ul li span:before {
   font-family: "Line Awesome Free";
   font-size: 46px;
   font-weight: 600;
@@ -122,23 +120,23 @@ section.status{
   color: inherit;
 }
 .status-box ul li:nth-child(1) span:before {
-  content: '\f46c';
+  content: "\f46c";
 }
 
 .status-box ul li:nth-child(2) span:before {
-  content: '\f560';
+  content: "\f560";
 }
 
 .status-box ul li:nth-child(3) span:before {
-  content: '\f818';
+  content: "\f818";
 }
 
 .status-box ul li:nth-child(4) span:before {
-  content: '\f0d1';
+  content: "\f0d1";
 }
 
 .status-box ul li:nth-child(5) span:before {
-  content: '\f582';
+  content: "\f582";
 }
 
 .status-box ul li {
@@ -146,7 +144,7 @@ section.status{
 }
 //line
 .status-box ul li:before {
-  content: '';
+  content: "";
   position: absolute;
   left: -6px;
   top: 0;
@@ -154,10 +152,9 @@ section.status{
   width: 2px;
   height: 100%;
   margin-top: 10px;
-  
 }
 .status-box ul li:nth-child(5) span::after {
-  box-shadow:0 0px 0px 0px $primary;
+  box-shadow: 0 0px 0px 0px $primary;
 }
 .status-box ul li.step-completed:before {
   background: $gray;
@@ -178,9 +175,7 @@ section.status{
 .status-box ul li small {
   float: right;
   font-size: 14px;
-
 }
-
 
 .noty_theme_mint {
   border-radius: 50px !important;
@@ -256,3 +251,19 @@ section.status{
   background: rgb(47, 45, 70, 0.1);
 }
 
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+}
