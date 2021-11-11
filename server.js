@@ -9,12 +9,13 @@ const session = require("express-session");
 const flash = require("express-flash");
 const MongoDbStore = require("connect-mongo");
 const passport = require("passport");
+const Emitter = require('events')
 // database connection
 
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  `mongodb+srv://parul:qqaazz123@cluster0.dnt82.mongodb.net/sbite?retryWrites=true&w=majority`,
+  'mongodb+srv://parul:qqaazz123@cluster0.dnt82.mongodb.net/sbite?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,6 +28,10 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
+//event emitter
+
+const eventEmitter = new Emitter()
+app.set('eventEmitter', eventEmitter)
 // session config
 
 app.use(
@@ -68,8 +73,31 @@ app.use((req, res, next) => {
 app.use(expressLayout);
 app.set("views", path.join(__dirname, "/resources/views"));
 app.set("view engine", "ejs");
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
-});
+})
 
 require("./routes/web")(app);
+app.use((req, res)=>{
+  return res.status(404).render('errors/404')
+})
+//socket
+
+const io = require('socket.io')(server)
+io.on('connection', (socket) => {
+
+//join
+  socket.on('join', (orderId) => {
+    socket.join(orderId);
+  })
+})
+
+eventEmitter.on('orderUpdated', (data) => {
+  io.to(`order_${data.id}`).emit('orderUpdates', data)
+
+})
+eventEmitter.on('orderPlaced', (data) => {
+  io.to('adminRoom').emit('orderPlaced', data)
+})
+
+

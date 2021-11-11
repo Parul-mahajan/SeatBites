@@ -20,6 +20,7 @@ function initRoutes(app) {
 
   app.get("/register", guest, authCntroller().register);
   app.post("/register", authCntroller().postRegister);
+  app.post('/logout', authCntroller().postLogout);
 
   app.post("/orders", auth, orderController().store);
   app.get("/customer/orders", auth, orderController().index);
