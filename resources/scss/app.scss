@@ -6,6 +6,7 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $dark;
+  background-color: #f4efe3;
 }
 
 nav li:last-child a {
@@ -23,20 +24,22 @@ nav li a {
 }
 
 section.hero {
-  background: $secondary;
+  background: rgb(47, 45, 70, 0.7);
+  color: #f4efe3;
 }
 
 .size {
   background-color: $secondary;
 }
 
-.add-to-cart {
+.add-to-cart,
+.to-cart {
   border: 2px solid $primary;
   color: $primary;
   transition: $smooth;
   &:hover {
     background: $primary;
-    border-color: $pure;
+    // border-color: $pure;
     color: $pure;
   }
 
@@ -74,4 +77,74 @@ section.login {
 .noty_theme_mint {
   border-radius: 50px !important;
   padding-left: 8px !important;
+}
+
+.card {
+  // box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.05);
+  box-shadow: 18px 19px 50px rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+  // background: rgba(255, 255, 255, 0.1);
+}
+
+#menu {
+  background-color: #f4efe3;
+}
+
+.footer-basic {
+  padding: 2% 0;
+  background: rgb(47, 45, 70, 0.6);
+  // color: #000000;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  opacity: 1;
+}
+
+.footer-basic ul a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px;
+  margin: 0 8px;
+  // color: rgb(7, 7, 7);
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.bg-tab {
+  background: rgb(47, 45, 70, 0.1);
 }

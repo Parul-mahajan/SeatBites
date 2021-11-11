@@ -279,71 +279,141 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
+  background-color: #f4efe3;
 }
 
 nav li:last-child a {
-  background-color: #406343;
+  background-color: #d1444a;
 }
 nav li:last-child a:hover {
-  background-color: #1b291c;
+  background-color: #fc928c;
 }
 
 nav li a {
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #406343;
+  color: #d1444a;
 }
 
 section.hero {
-  background: #e9daa8;
+  background: rgba(47, 45, 70, 0.7);
+  color: #f4efe3;
 }
 
 .size {
-  background-color: #e9daa8;
+  background-color: #f4efe3;
 }
 
-.add-to-cart {
-  border: 2px solid #406343;
-  color: #406343;
+.add-to-cart,
+.to-cart {
+  border: 2px solid #d1444a;
+  color: #d1444a;
   transition: all 0.3s ease-in-out;
 }
-.add-to-cart:hover {
-  background: #406343;
-  border-color: #fff;
+.add-to-cart:hover,
+.to-cart:hover {
+  background: #d1444a;
   color: #fff;
 }
-.add-to-cart:focus {
+.add-to-cart:focus,
+.to-cart:focus {
   outline: none;
 }
 
 .btn-primary {
-  background: #406343;
+  background: #d1444a;
   transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
-  background: #1b291c;
+  background: #fc928c;
 }
 
 section.cart {
-  background: #e9daa8;
+  background: #f4efe3;
 }
 section.cart .amount {
-  color: #406343;
+  color: #d1444a;
 }
 
 section.login {
-  background: #e9daa8;
+  background: #f4efe3;
   min-height: calc(100vh - 85px);
 }
 section.login a {
-  color: #406343;
+  color: #d1444a;
 }
 section.login a:hover {
-  color: #1b291c;
+  color: #fc928c;
 }
 
 .noty_theme_mint {
   border-radius: 50px !important;
   padding-left: 8px !important;
+}
+
+.card {
+  box-shadow: 18px 19px 50px rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+}
+
+#menu {
+  background-color: #f4efe3;
+}
+
+.footer-basic {
+  padding: 2% 0;
+  background: rgba(47, 45, 70, 0.6);
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  opacity: 1;
+}
+
+.footer-basic ul a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px;
+  margin: 0 8px;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.bg-tab {
+  background: rgba(47, 45, 70, 0.1);
 }
