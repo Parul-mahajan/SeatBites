@@ -5,6 +5,7 @@ import moment from "moment";
 
 let addTocart = document.querySelectorAll(".add-to-cart");
 let cartCounter = document.querySelector("#cartCounter");
+let remove = document.querySelector("#deleteCart");
 
 function updateCart(pizza) {
   axios
@@ -33,6 +34,13 @@ addTocart.forEach((btn) => {
     let pizza = JSON.parse(btn.dataset.pizza);
     updateCart(pizza);
     // console.log(e);
+  });
+});
+remove.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    // let pizza = JSON.parse(btn.dataset.pizza);
+    // updateCart(pizza);
+    console.log(e);
   });
 });
 

@@ -17,6 +17,13 @@
         <span class="font-bold text-lg"
           >₹ <%= pizza.item.price * pizza.qty %></span
         >
+        <button
+          class="ml-12"
+          id="deleteCart"
+          data-pizza-id="<%= pizza.item._id %>"
+        >
+          Delete
+        </button>
       </div>
       <% } %>
     </div>
@@ -47,15 +54,7 @@
           <div>
             <button
               type="submit"
-              class="
-                btn-primary
-                px-6
-                py-2
-                rounded-full
-                text-white
-                font-bold
-                mt-6
-              "
+              class="btn-primary px-6 py-2 rounded-full text-white font-bold mt-6"
             >
               Order Now
             </button>
@@ -65,17 +64,7 @@
       <%} else {%>
       <a
         href="/login"
-        class="
-          inline-block
-          cursor-pointer
-          px-6
-          btn-primary
-          py-2
-          rounded-full
-          text-white
-          font-bold
-          mt-6
-        "
+        class="inline-block cursor-pointer px-6 btn-primary py-2 rounded-full text-white font-bold mt-6"
         >Login to continue</a
       >
       <% }%>
@@ -85,22 +74,11 @@
   <div class="empty-cart">
     <div class="container mx-auto text-center">
       <h1 class="text-3xl font-bold mb-2">Cart empty</h1>
-      <p class="text-gray-500 text-lg mb-12">
-        no orders go back<br />Lorem ipsum dolor sit Lorem, ipsum dolor..
-      </p>
+      <p class="text-gray-500 text-lg mb-12">no orders go back<br /></p>
       <img class="w-2/5 mx-auto" src="/img/empty-cart.png" alt="" />
       <a
         href="/"
-        class="
-          inline-block
-          px-6
-          py-2
-          rounded-full
-          btn-primary
-          text-white
-          font-bold
-          mt-12
-        "
+        class="inline-block px-6 py-2 rounded-full btn-primary text-white font-bold mt-12"
         >Go back</a
       >
     </div>

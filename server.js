@@ -14,13 +14,10 @@ const Emitter = require("events");
 
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://parul:qqaazz123@cluster0.dnt82.mongodb.net/sbite?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGO_CONNECTION_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
@@ -39,8 +36,7 @@ app.use(
     secret: process.env.COOKIE_SECRET,
     resave: false,
     store: MongoDbStore.create({
-      mongoUrl:
-        "mongodb+srv://parul:qqaazz123@cluster0.dnt82.mongodb.net/sbite?retryWrites=true&w=majority",
+      mongoUrl: process.env.MONGO_CONNECTION_URL,
     }),
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 24 hour

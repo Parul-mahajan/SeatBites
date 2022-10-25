@@ -14,13 +14,14 @@ function initRoutes(app) {
 
   app.get("/cart", cartController().index);
   app.post("/update-cart", cartController().update);
+  app.post("/remove-cart-item", cartController().removeCartItem);
 
   app.get("/login", guest, authCntroller().login);
   app.post("/login", authCntroller().postLogin);
 
   app.get("/register", guest, authCntroller().register);
   app.post("/register", authCntroller().postRegister);
-  app.post('/logout', authCntroller().postLogout);
+  app.post("/logout", authCntroller().postLogout);
 
   app.post("/orders", auth, orderController().store);
   app.get("/customer/orders", auth, orderController().index);

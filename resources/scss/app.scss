@@ -32,6 +32,7 @@ section.hero {
   background-color: $secondary;
 }
 
+.remove-to-cart,
 .add-to-cart,
 .to-cart {
   border: 2px solid $primary;
@@ -265,5 +266,36 @@ section.status {
 @media (max-width: 768px) {
   .status-box ul li span:before {
     font-size: 34px;
+  }
+}
+
+.cart-item {
+  border-bottom: 1px solid;
+  padding-bottom: 40px;
+  transition : transform 2s ease, opacity 2s ease;
+}
+
+.cancel-item-icon {
+    color : $cancel;
+}
+
+.cancel-item-icon-progress {
+    color : $progress;
+    animation : shake 1.5s ease infinite;
+}
+
+.cancel-item-icon-success {
+    color : $success;
+}
+
+@keyframes shake {
+  25% {
+      transform : rotate(40deg);
+  }
+  50% {
+      transform : rotate(0deg);
+  }
+  75% {
+      transform : rotate(-40deg);
   }
 }

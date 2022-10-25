@@ -1,10 +1,32 @@
+const { json } = require("express");
+
 function cartController() {
-  // factory pattern - return object
   return {
     index(req, res) {
       res.render("customers/cart");
     },
+    removeCartItem(req, res) {
+      let { pizza } = req.body;
+      let cart = req.session.cart;
+      delete cart.items[pizza.item._id];
+      cart.totalQty -= pizza.qty;
+      cart.totalPrice -= pizza.item.price * pizza.qty;
+      res.json({
+        updatedQty: cart.totalQty,
+        updatedTotalPrice: cart.totalPrice,
+      });
+    },
     update(req, res) {
+      // let cart = {
+      //     items: {
+      //         pizzaId: { item: pizzaObject, qty:0 },
+      //         pizzaId: { item: pizzaObject, qty:0 },
+      //         pizzaId: { item: pizzaObject, qty:0 },
+      //     },
+      //     totalQty: 0,
+      //     totalPrice: 0
+      // }
+      // for the first time creating cart and adding basic object structure
       if (!req.session.cart) {
         req.session.cart = {
           items: {},
@@ -28,8 +50,8 @@ function cartController() {
         cart.totalPrice = cart.totalPrice + req.body.price;
       }
       return res.json({ totalQty: req.session.cart.totalQty });
-      // return res.json({ totalQty: "ALL" });
     },
   };
 }
+
 module.exports = cartController;
